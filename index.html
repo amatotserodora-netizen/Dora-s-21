@@ -38,6 +38,7 @@ p{margin:.4em 0}
 .ag i{font-style:normal;font-size:1.9rem}
 .ag h3{margin:2px 0;font-size:2rem}
 .ag p{margin:0;color:var(--soft);font-size:.98rem}
+.pp summary{list-style:none;cursor:pointer}.pp summary::-webkit-details-marker{display:none}.pp summary:focus-visible{outline:3px solid var(--ink);outline-offset:4px;border-radius:12px}.tap{display:inline-block;margin-top:6px;font-size:.88rem;color:var(--deep);border-bottom:1px solid var(--line)}.pp[open] .tap{display:none}.ppb{margin-top:14px;background:var(--card);border:1px solid var(--tint);border-radius:18px;padding:18px 16px}.ppb p{color:var(--ink);font-size:.95rem}.ppb ul{text-align:left;margin:10px auto 14px;padding-left:20px;max-width:340px}.ppb li{margin:6px 0;font-size:.95rem}
 .arch{background:var(--card);border:2px solid var(--line);border-radius:999px 999px 28px 28px;padding:64px 22px 36px;margin-top:6px;box-shadow:0 14px 34px rgba(90,54,160,.14)}
 .arch .big{font-size:2.8rem}
 .arch .dt{display:inline-block;border:1px solid var(--line);border-radius:10px;padding:8px 26px;margin:12px 0 4px}
@@ -112,7 +113,7 @@ textarea{resize:vertical;min-height:84px}
     <h2 class="s">The Agenda</h2>
     <div class="ag">
       <div><i>🎨</i><h3 class="s">Sip &amp; Paint</h3><p>Pour a glass, pick up a brush and create something lovely.</p></div>
-      <div><i>📽️</i><h3 class="s">Mini PowerPoint</h3><p>Prepare a small presentation about the celebrant: anything about me!</p></div>
+      <details class="pp"><summary><i>📽️</i><h3 class="s">Mini PowerPoint</h3><p>Prepare a small presentation about the celebrant: anything about me!</p><span class="tap">tap for more info ▾</span></summary><div class="ppb"><p>Not sure what to talk about? Here are a few ideas. They are just suggestions, nothing is compulsory! 💜</p><ul><li>Dora through the years: throwback photos 📸</li><li>Your favourite memory with Dora</li><li>Things you love about Dora</li><li>Fun facts people may not know about her</li><li>A wish or message for her year ahead 🎂</li></ul><p>Please send your PowerPoint in advance so it is ready to play on the day.</p><a class="btn f" href="mailto:amatotserodora@gmail.com?subject=Dora%27s%2021st%20birthday&body=Hi%20Dora%2C%0A%0AHere%27s%20my%20mini%20PowerPoint%20for%20your%2021st%21%20%F0%9F%8E%89%0A%0A%28Please%20attach%20your%20file%20before%20sending.%29">✉️ Open my email app</a><a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=amatotserodora@gmail.com&su=Dora%27s%2021st%20birthday&body=Hi%20Dora%2C%0A%0AHere%27s%20my%20mini%20PowerPoint%20for%20your%2021st%21%20%F0%9F%8E%89%0A%0A%28Please%20attach%20your%20file%20before%20sending.%29" target="_blank" rel="noopener">Open in Gmail instead</a><p class="soft" style="font-size:.88rem;margin-top:12px">Or email <b>amatotserodora@gmail.com</b> yourself, with the subject <b>Dora's 21st birthday</b>. <button type="button" id="cp" class="btn" style="max-width:220px;padding:8px 14px;font-size:.9rem">Copy email address</button></p><p class="soft" style="font-size:.85rem">Remember to attach your file before you send.</p></div></details>
       <div><i>🎂</i><h3 class="s">Cake &amp; Celebrate</h3><p>Good company, good vibes.</p></div>
     </div>
   </section>
@@ -177,6 +178,7 @@ textarea{resize:vertical;min-height:84px}
   ['nm','msg'].forEach(function(i){$(i).addEventListener('input',upd)});
   ['yes','no'].forEach(function(i){$(i).addEventListener('click',upd)});
   upd();
+document.getElementById('cp').addEventListener('click',function(){var b=this,a='amatotserodora@gmail.com';function ok(){b.textContent='Copied! ✓'}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(a).then(ok,function(){prompt('Copy this email address:',a)})}else{prompt('Copy this email address:',a)}});
 })();
 </script>
 </body>
